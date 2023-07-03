@@ -1,0 +1,10 @@
+		COMO FAZER CONEXÃO COM O BANCO DE DADOS SQL SERVER
+
+- Abra o arquivo appsettings.json, localizado em BomDeBoca.Server
+- Em DefaultConnection, entre as aspas, insira a string de conexão do seu banco de dados
+
+		COMO CRIAR AS TABELAS NO BANCO DE DADOS
+
+- Após inserido a string de conexão, clique em "Tools", "NuGet Package Manager" e "Package Manager Console"
+- no console, digite "add-migration Initial"
+- Após a migração ser criada, digite "update-database"

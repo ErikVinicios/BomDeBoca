@@ -1,0 +1,239 @@
+﻿@page "/companyprofile"
+@page "/companyprofile/{companyID:guid}/{visitantID:guid}"
+@inherits Base
+@layout OtherLayout
+@inject IAuthenticationService authenticationService
+@inject NavigationManager navigation
+@inject IJSRuntime js
+@inject IProductService _productService
+@inject ICompanyFeedbackService _companyFeedbackService
+@inject IClientService _clientService
+@inject ICompanyService _companyService
+
+@if (loading)
+{
+    <Loading></Loading>
+    return;
+}
+<div class="row d-flex justify-content-center">
+    <div class="card mb-5" style="border: none">
+        <div class="rounded-top d-flex flex-row" style="background-color: #000; height:200px;">
+            <div class="d-flex flex-column" style="text-align: center; align-items: center; margin-top:  80px; margin-left: 43%;">
+                <img src="@Methods.ConvertImgBytesToDisplay(company.Logo)"
+                        alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                        style="width: 150px; z-index: 1">
+                <h4 style="margin: 0;">@company.Name</h4>
+            </div>
+            @if (isEdit)
+            {
+                <div class="d-flex flex-column" style="margin-left: 27%; margin-top: 18%;">
+                    <div class="justify-content-center d-flex gap-3 mt-2">
+                        <button class="btn btn-warning d-flex gap-1 align-items-center" style="border-radius: 10px" data-toggle="modal" @onclick=@(() => Edit())>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"></path>
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"></path>
+                            </svg> Editar
+                        </button>
+                        <button class="btn btn-danger" style="padding-left: 25px; padding-right: 25px; border-radius: 10px" @onclick=@(() => Logout())>
+                            Sair
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="p-5 text-black mb-5" style="text-align: center;">
+        <div class="mb-5">
+            <h3 style="margin-top: 25px;"><strong>SOBRE A EMPRESA</strong></h3>
+            <div class="p-4 pb-0" style="background-color: #f8f9fa;">
+                <p class="font-italic mb-1">@company.Description</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center gap-4" >
+            <button type="button" class="btn btn-warning" @onclick=@(() => ShowMenu())>Cardápio</button>
+            <button type="button" class="btn btn-warning" @onclick=@(() => ShowFeedbacks())>Avaliações</button>
+        </div>
+        @if (showMenu) {
+            <div class="mb-5 mt-5">
+                <h3><strong>Cardápio</strong></h3>
+            </div>
+            @if (isEdit) {
+                <div>
+                    <button type="button" class="btn btn-warning" @onclick=@(() => NewProduct())>Adicionar</button>
+                </div>
+            }
+            <ListProduct ProductList="productList" isEditing="isEdit" companyID="companyID"></ListProduct>
+        }
+        @if (showFeedbacks)
+        {
+            <div class="mb-5 mt-5">
+                <h3><strong>Avaliações</strong></h3>
+            </div>
+
+            <div class="gap-5">
+                @if (!isEdit)
+                {
+                    <div class="gap-2 pb-5">
+                        <div class="gap-2" style="display: flex">
+                            <img src="@Methods.ConvertImgBytesToDisplay(visitant.Photo)"
+                            alt="image 1" style="border-radius: 50%; width: 50px; height: 50px;">
+                            <textarea class="form-control font-italic" style="height: 80px;" placeholder="Adicione uma avaliação" @bind="feedback.Description" rows="4"></textarea>
+                        </div>
+                        <div style="display: flex; justify-content: flex-end">
+                            <button type="button" class="btn btn-warning mt-2" @onclick=@(() => NewFeedback())>Avaliar</button>
+                        </div>
+                    </div>
+                }
+
+                @if (feedbackList.Count() == 0 || feedbackList == null)
+                {
+                    <div>
+                        <h5 style="padding-top: 60px;">esta empresa ainda não possui avaliações </h5>
+                    </div>
+                }
+
+                else
+                {
+                    foreach (CompanyFeedback fb in feedbackList.OrderBy(f => f.Date))
+                    {
+                        <div class="pt-3">
+                            <div class="gap-2" style="display: flex">
+                                <img src="@Methods.ConvertImgBytesToDisplay(fb.ClientPhoto)"
+                                        alt="image 1" style="border-radius: 50%; width: 60px; height: 60px; margin-top: 5px;">
+                                <div style="text-align: initial;">
+                                    <p style="margin: 0 0 3px 7px; font-style: italic;">@fb.ClientName</p>
+                                    <textarea class="form-control font-italic" style="height: 80px; background-color: transparent; width: 570%;" readonly rows="4">@fb.Description</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        }
+    </div>
+</div>
+<CompanyProfileEdit OnClose="refreshCompany" @ref="companyprofileEdit"></CompanyProfileEdit>
+<NewProduct @ref="newProduct" OnClose="refreshProductList"></NewProduct>
+@code {
+    [Parameter]
+    public Guid visitantID { get; set; }
+    [Parameter]
+    public Guid companyID { get; set; }
+
+    bool showMenu { get; set; }
+    bool showFeedbacks { get; set; }
+    bool isEdit { get; set; }
+    bool loading { get; set; } = true;
+    CompanyProfileEdit companyprofileEdit;
+    public Client? visitant;
+    public Company company;
+    List<Product> productList;
+    List<CompanyFeedback> feedbackList;
+    NewProduct newProduct;
+    CompanyFeedback feedback;
+
+    protected override async Task OnInitializedAsync() {
+        await OnInitializedBase();
+        loading = true;
+        StateHasChanged();
+        if (visitantID != Guid.Empty)
+        {
+            company = await _companyService.Get(companyID);
+            visitant = await _clientService.Get(visitantID);
+            isEdit = false;
+        } else {
+            company = await _companyService.Get(CurrentCompany.ID);
+            isEdit = true;
+        }
+
+        productList = await _productService.GetAllByCompanyID(company.ID);
+        feedbackList = new List<CompanyFeedback>();
+        showMenu = true;
+        loading = false;
+        StateHasChanged();
+    }
+
+    async Task Edit() {
+        await companyprofileEdit.Show(company);
+    }
+
+    async Task Logout() {
+        APIResult result = await authenticationService.Logout();
+        if (result.Result)
+            navigation.NavigateTo("/", true);
+    }
+
+    async Task NewProduct() {
+        newProduct.New(company);
+    }
+
+    async Task ShowMenu()
+    {
+        Resets();
+        showMenu = true;
+    }
+
+    async Task ShowFeedbacks()
+    {
+        loading = true;
+        StateHasChanged();
+        Resets();
+        feedback = new CompanyFeedback();
+        var result = await _companyFeedbackService.GetAllByIdCompany(company.ID);
+        if (result.Result)
+        {
+            feedbackList = (List<CompanyFeedback>)result.Obj;
+        }
+
+        showFeedbacks = true;
+        loading = false;
+        StateHasChanged();
+    }
+
+    async Task NewFeedback()
+    {
+        loading = true;
+        StateHasChanged();
+        feedback.ClientName = visitant.Name;
+        feedback.ClientID = visitant.ID;
+        feedback.CompanyID = company.ID;
+        feedback.ClientPhoto = visitant.Photo;
+        var result = await _companyFeedbackService.Save(feedback);
+        if (result.Result)
+        {
+            feedbackList.Add((CompanyFeedback)result.Obj);
+            feedback = new CompanyFeedback();
+        }
+
+        loading = false;
+        StateHasChanged();
+    }
+
+    async Task EditFeedback(CompanyFeedback feedback)
+    {
+        var result = await _companyFeedbackService.Update(feedback);
+        if (result.Result)
+        {
+            feedbackList.Remove(feedback);
+            feedbackList.Add((CompanyFeedback)result.Obj);
+        }
+    }
+
+    async void Resets() {
+        showMenu = false;
+        showFeedbacks = false;
+    }
+
+    void refreshCompany(Company comp) {
+        company = comp;
+    }
+
+    async Task refreshProductList()
+    {
+        loading = true;
+        StateHasChanged();
+        productList = await _productService.GetAllByCompanyID(company.ID);
+        loading = false;
+        StateHasChanged();
+    }
+}

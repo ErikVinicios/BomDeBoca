@@ -1,0 +1,106 @@
+﻿@page "/login"
+@using System.Text
+@using BomDeBoca.Shared.Entities
+@using BomDeBoca.Shared.dto;
+@inherits Base
+@layout OtherLayout
+@inject NavigationManager navigation
+@inject IAuthenticationService _authenticationService
+@inject TokenAuthenticationProvider _authProvider
+@inject HttpClient _httpClient
+
+@if (loading)
+{
+    <Loading></Loading>
+    return;
+}
+
+<div class="bb-container">
+    <div class="bb-title" style=@(show ? "margin-bottom: 16px" : "")>
+            Participar do BomDeBoca
+    </div>
+    <div class="mb-2">
+        <Aviso Exibir="show">
+            <h5>@msgError</h5>
+        </Aviso>
+    </div>
+    <div class="bb-form">
+        <div class="form-group row pb-4">
+            <label class="bb-label">CPF/CNPJ</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" @bind="@user.CpfCnpj" maxlength="18" data-mask-for-cpf-cnpj placeholder="ex: XX.XXX.XXX/0001-XX || XXX.XXX.XXX-XX">
+            </div>
+        </div>
+        <div class="form-group row pb-4">
+            <label class="bb-label">Senha</label>
+            <div class="col-sm-10">
+                <input class="form-control" @bind="@user.Password" type="password" placeholder="Senha">
+            </div>
+        </div>
+        <div class="pb-4">
+            <button class="btn btn-outline-warning bb-button" @onclick=@(() => Enter())>Entrar</button>
+        </div>
+        <div class="pb-3">
+            <a href="/register">Ainda não possuo cadastro</a>
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public string MensagemAviso { get; set; }
+
+    bool show { get; set; }
+    bool loading { get; set; }
+    string msgError { get; set; }
+    LoginDTO user;
+    bool ExibirAviso { get; set; }
+
+    protected override void OnInitialized()
+    {
+        user = new LoginDTO();
+    }
+
+    async Task Enter()
+    {
+        loading = true;
+        StateHasChanged();
+        if (user.CpfCnpj == null || user.Password == null)
+        {
+            showMsgError("Preencha todos os campos.");
+            loading = false;
+            StateHasChanged();
+            return;
+        }
+        if (user.CpfCnpj.Length == 14)
+            user.UserType = UserType.CLIENT;
+        else if (user.CpfCnpj.Length == 18)
+            user.UserType = UserType.COMPANY;
+        else {
+            showMsgError("CPF/CNPJ inválido.");
+            loading = false;
+            StateHasChanged();
+            return;
+        }
+        LocalStorageDTO result = await _authenticationService.Login(user);
+        if (result.Token == null)
+        {
+            if (user.CpfCnpj.Length == 14)
+                showMsgError("Nenhum cliente encontrado.");
+            else
+                showMsgError("Nenhuma empresa encontrada.");
+            loading = false;
+            StateHasChanged();
+            return;
+        }
+        loading = false;
+        StateHasChanged();
+        navigation.NavigateTo("/");
+    }
+
+    void showMsgError(string msg)
+    {
+        msgError = msg;
+        show = true;
+        StateHasChanged();
+    }
+}

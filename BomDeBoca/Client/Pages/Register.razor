@@ -1,0 +1,124 @@
+﻿@page "/register"
+@layout OtherLayout
+@inject NavigationManager navigation
+@inject IJSRuntime _js
+@inject ICompanyService _companyService
+@inject IClientService _clientService
+
+@if (loading)
+{
+    <Loading></Loading>
+    return;
+}
+
+<div>
+    <div class="bb-title" style=@(show ? "margin-bottom: 16px" : "")>
+        Registre um usuário
+    </div>
+
+    <div class="mb-2">
+        <Aviso Exibir="show">
+            <h5>@msgError</h5>
+        </Aviso>
+    </div>
+
+    <div class="bb-form" style="text-align: center;">
+        <div class="form-group row pb-4">
+            <label class="bb-label">Nome</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" @bind="@register.Name" placeholder="Nome Completo">
+            </div>
+        </div>
+        <div class="form-group row pb-4">
+            <label class="bb-label">CPF/CNPJ</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" @bind="@register.CpfCNPJ" maxlength="18" data-mask-for-cpf-cnpj placeholder="ex: XX.XXX.XXX/0001-XX || XXX.XXX.XXX-XX">
+            </div>
+        </div>
+        <div class="form-group row pb-4">
+            <label class="bb-label">Email</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="email" @bind="@register.Email" placeholder="ex: exemplo@exemplo.com">
+            </div>
+        </div>
+        <div class="form-group row pb-4">
+            <label class="bb-label">Senha</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="password" @bind="@register.Password" placeholder="Senha">
+            </div>
+        </div>
+        <div class="form-group row pb-4">
+            <label class="bb-label">Confirmar Senha</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="password" @bind="@confPassword" placeholder="Confirmar Senha">
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-primary bb-button" @onclick=@(() => Save())>Salvar</button>
+        </div>
+    </div>
+</div>
+@code {
+    RegisterDTO register;
+    bool show { get; set; }
+    string msgError { get; set; }
+    string confPassword { get; set; }
+    bool loading { get; set; }
+
+    protected override void OnInitialized()
+    {
+        register = new RegisterDTO();
+    }
+
+    async Task Save() {
+        loading = true;
+        StateHasChanged();
+        if (register.Name == null || register.CpfCNPJ == null || register.Email == null || register.Password == null || confPassword == null)
+        {
+            showMsgError("Preencha todos os campos.");
+            loading = false;
+            StateHasChanged();
+            return;
+        }
+
+        if (register.Password != confPassword)
+        {
+            showMsgError("As senhas não considem.");
+            loading = false;
+            StateHasChanged();
+            return;
+        }
+
+        APIResult result;
+        if (register.CpfCNPJ != null && register.CpfCNPJ.Length == 14)
+            result = await _clientService.Save(register);
+        else if (register.CpfCNPJ != null && register.CpfCNPJ.Length == 18)
+            result = await _companyService.Save(register);
+        else {
+            showMsgError("CPF/CNPJ inválido.");
+            loading = false;
+            StateHasChanged();
+            return;
+        }
+
+        if (!result.Result) {
+            showMsgError(result.Message);
+            loading = false;
+            StateHasChanged();
+            return;
+        }
+
+        show = false;
+        loading = false;
+        StateHasChanged();
+        navigation.NavigateTo("/login");
+    }
+
+    void showMsgError(string msg)
+    {
+        msgError = msg;
+        show = true;
+        StateHasChanged();
+    }
+}

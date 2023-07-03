@@ -1,0 +1,89 @@
+﻿@inject IJSRuntime js
+@inject ICompanyService _companyService
+
+@if (loading)
+{
+    <Loading></Loading>
+    return;
+}
+
+@if (showCompanyProfileEdit)
+{
+    <div class="modal-backdrop show"></div>
+
+    <div class="modal" role="dialog" aria-hidden="true" style="display:block;">
+        <div class="modal-dialog modal-lg" role="document" style="z-index: 8000000;">
+            <div class="modal-content" style="border-radius: 10px;">
+                <div class="modal-header" style="background-color: #ffc107; border-radius: 10px;">
+                    <h5 class="modal-title">Editar Perfil</h5>
+                    <button type="button" class="btn-close" @onclick=@(() => Back()) data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="justify-content-center">
+                        <div style="display: block; text-align: center; ">
+                            <div class="mb-2" style="position: relative;">
+                                <img src="@Methods.ConvertImgBytesToDisplay(currentCompany.Logo)"
+                                     alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                                     style="width: 150px; z-index: 1">
+                                <BlazorInputFile.InputFile class="form-control form-control-sm" style="position: absolute; width: 306px; bottom: 12px; right: 0%; margin: auto;" OnChange="HandleSelection"/>
+                            </div>
+                            <input class="form-control-lg" style="text-align: center; border-color: transparent;" type="text" @bind="@currentCompany.Name">
+                            <div class="mt-3">
+                                <h3><strong>SOBRE A EMPRESA</strong></h3>
+                                <textarea class="form-control font-italic" style="text-align: center;" @bind="currentCompany.Description" rows="4">
+                                    @currentCompany.Description
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer gap-2 d-flex justify-content-center">
+                    <button class="btn btn-warning" style="border-radius: 10px" @onclick=@(() => Save()) data-dismiss="modal">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public EventCallback<Company> OnClose { get; set; }
+
+    public bool showCompanyProfileEdit { get; set; } = false;
+    Company currentCompany;
+    bool loading { get; set; }
+
+    public async Task Show(Company company)
+    {
+        currentCompany = company;
+        showCompanyProfileEdit = true;
+        StateHasChanged();
+    }
+
+    async Task Back() {
+        showCompanyProfileEdit = false;
+        StateHasChanged();
+    }
+
+    async Task Save()
+    {
+        loading = true;
+        StateHasChanged();
+        var result = await _companyService.Update(currentCompany);
+        if (result.Result) {
+            showCompanyProfileEdit = false;
+            loading = false;
+            StateHasChanged();
+            await OnClose.InvokeAsync((Company)result.Obj);
+        }
+    }
+
+    async Task HandleSelection(IFileListEntry[] files) {
+        var file = files.FirstOrDefault();
+        if (file != null) {
+            var ms = new MemoryStream();
+            await file.Data.CopyToAsync(ms);
+            currentCompany.Logo = ms.ToArray();
+        }
+    }
+}

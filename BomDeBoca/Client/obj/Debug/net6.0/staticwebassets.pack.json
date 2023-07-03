@@ -1,0 +1,193 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\erik\\.nuget\\packages\\bootstrap\\4.6.1\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\obj\\Debug\\net6.0\\build-gz\\Bb0dDcM4.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BomDeBoca.Client.styles.css",
+      "PackagePath": "staticwebassets\\BomDeBoca.Client.styles.css"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\Imagens\\Captura de tela 2023-03-01 185850.png",
+      "PackagePath": "staticwebassets\\Imagens\\Captura de tela 2023-03-01 185850.png"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\Imagens\\noPhoto.jpg",
+      "PackagePath": "staticwebassets\\Imagens\\noPhoto.jpg"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\Imagens\\tool.png",
+      "PackagePath": "staticwebassets\\Imagens\\tool.png"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\javascript\\jquery.mask.js",
+      "PackagePath": "staticwebassets\\javascript\\jquery.mask.js"
+    },
+    {
+      "Id": "H:\\BomDeBoca\\BomDeBoca\\Client\\wwwroot\\javascript\\jquery.min.js",
+      "PackagePath": "staticwebassets\\javascript\\jquery.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BomDeBoca.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.BomDeBoca.Client.props",
+      "PackagePath": "build\\BomDeBoca.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.BomDeBoca.Client.props",
+      "PackagePath": "buildMultiTargeting\\BomDeBoca.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.BomDeBoca.Client.props",
+      "PackagePath": "buildTransitive\\BomDeBoca.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

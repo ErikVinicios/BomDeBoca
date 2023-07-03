@@ -1,0 +1,132 @@
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+G:\Blazor\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+F:\Blazor\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\ref\BomDeBoca.Shared.dll
+G:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+G:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+G:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+G:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+E:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+E:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+E:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+E:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+H:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+H:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+H:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+H:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+D:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+H:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+E:\pendrive2\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+D:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+D:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+D:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+D:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+C:\Users\Erik Vinicios\Desktop\pendrive\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll
+F:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.deps.json
+F:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.dll
+F:\BomDeBoca\BomDeBoca\Shared\bin\Debug\net6.0\BomDeBoca.Shared.pdb
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.AssemblyReference.cache
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.GeneratedMSBuildEditorConfig.editorconfig
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfoInputs.cache
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.AssemblyInfo.cs
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.csproj.CoreCompileInputs.cache
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.dll
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\refint\BomDeBoca.Shared.dll
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\BomDeBoca.Shared.pdb
+F:\BomDeBoca\BomDeBoca\Shared\obj\Debug\net6.0\ref\BomDeBoca.Shared.dll

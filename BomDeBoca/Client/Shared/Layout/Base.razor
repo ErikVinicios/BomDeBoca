@@ -1,0 +1,22 @@
+﻿@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager navigation
+@code {
+    protected Client? CurrentClient;
+    protected Company? CurrentCompany;
+
+    protected async Task OnInitializedBase() {
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+        if (user.Identity.IsAuthenticated)
+        {
+            var client = user.Claims.FirstOrDefault(c => c.Type == "client");
+            if (client != null) {
+                CurrentClient = JsonSerializer.Deserialize<Client>(client.Value);
+                return;
+            }
+            var company = user.Claims.FirstOrDefault(c => c.Type == "company");
+            if (company != null)
+                CurrentCompany = JsonSerializer.Deserialize<Company>(company.Value);
+        }
+    }
+}

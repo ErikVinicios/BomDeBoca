@@ -1,0 +1,66 @@
+﻿@inject IProductService _productService
+
+@if (loading)
+{
+    <Loading></Loading>
+    return;
+}
+
+
+@if (ProductList.Count() == 0)
+{
+    <div class="mt-5">
+        <h3>Cardápio vazio. </h3>
+    </div>
+}
+else
+{
+    <div class="row" style="text-align: center;">
+        @foreach (Product product in ProductList)
+        {
+            <div class="col-sm-3 col-lg-3 col-md-3">
+                <div class="card" style="border: none; padding-top: 20%; display: block;">
+                    <img src="@Methods.ConvertImgBytesToDisplay(product.Image)" class="img-rounded" alt="@product.Name" width="180" height="180" />
+                    <div class="card-body" style="padding-top: 4%;">
+                        <h4 class="pull-right">R$@product.Price.ToString("N2")</h4>
+                        <h4 class="card-title">@product.Name</h4>
+                        <p class="card-text">@product.Description</p>
+                        <button class="btn btn-warning" style="border-radius: 10px" @onclick=@(() => Show(product, isEditing)) data-dismiss="modal">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<NewProduct @ref="newProduct" OnClose="refreshProduct"></NewProduct>
+@code {
+    [Parameter]
+    public List<Product> ProductList { get; set; }
+    [Parameter]
+    public bool isEditing { get; set; } = false;
+    [Parameter]
+    public Guid companyID { get; set; }
+
+    NewProduct newProduct;
+    bool loading { get; set; }
+
+    private async Task Show(Product product, bool isEditing)
+    {
+        newProduct.Show(product, isEditing);
+    }
+
+    async Task refreshProduct()
+    {
+        loading = true;
+        StateHasChanged();
+        ProductList = await _productService.GetAllByCompanyID(companyID);
+        loading = false;
+        StateHasChanged();
+    }
+
+    public async Task Refresh()
+    {
+        StateHasChanged();
+    }
+}

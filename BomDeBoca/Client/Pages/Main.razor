@@ -1,0 +1,22 @@
+﻿@page "/"
+@inherits Base
+<AuthorizeView>
+    <Authorized>
+        @if (CurrentClient != null) {
+            <h1>Olá @CurrentClient.Name </h1>
+        }
+        @if (CurrentCompany != null)
+        {
+            <h1>Olá @CurrentCompany.Name </h1>
+        }
+    </Authorized>
+    <NotAuthorized>
+        <h1>Usuário não autenticado </h1>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    protected override async Task OnInitializedAsync() {
+        await OnInitializedBase();
+    }
+}

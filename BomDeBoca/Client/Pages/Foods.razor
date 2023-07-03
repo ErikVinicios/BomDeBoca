@@ -1,0 +1,38 @@
+﻿@page "/foods"
+@inject IProductService _productService
+
+@if (loading)
+{
+    <Loading></Loading>
+    return;
+}
+
+<SearchBar placeholder="Nome do Prato" OnSearch="search" OnReaload="loadList"></SearchBar>
+<div class="container" style="display: flex; justify-content: center; align-items: center;">
+    <ListProduct @ref="listProduct" ProductList="list" isEditing=false></ListProduct>
+</div>
+@code {
+    List<Product> productList;
+    List<Product> list;
+    ListProduct listProduct;
+    bool loading { get; set; }
+    protected override async Task OnInitializedAsync() {
+        await loadList();
+    }
+
+    async Task search(string name)
+    {
+        list = productList.Where(c => c.Name.ToUpper().Contains(name.ToUpper())).ToList();
+        listProduct.Refresh();
+    }
+
+    async Task loadList()
+    {
+        loading = true;
+        StateHasChanged();
+        productList = await _productService.GetAll();
+        list = productList;
+        loading = false;
+        StateHasChanged();
+    }
+}

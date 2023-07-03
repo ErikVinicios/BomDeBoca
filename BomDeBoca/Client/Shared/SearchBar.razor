@@ -1,0 +1,32 @@
+﻿<div class="container">
+    <nav class="navbar navbar-light bg-light" style="width: 100%; text-align: center; display: block;">
+        <input class="form-control" id="bb-search" @bind="name" placeholder="@placeholder">
+        <div>
+            <button class="btn btn-warning my-2" style="left: 1%; position: absolute;" @onclick=@(() => RealoadList()) type="button">
+                Recarregar lista
+            </button>
+            <button class="btn btn-outline-danger my-2" style="margin-right: 15px" @onclick=@(() => Search()) type="button">Pesquisar</button>
+        </div>
+    </nav>
+</div>
+@code {
+    [Parameter]
+    public string placeholder { get; set; }
+    [Parameter]
+    public EventCallback<string> OnSearch { get; set; }
+    [Parameter]
+    public EventCallback OnReaload { get; set; }
+
+    string name { get; set; }
+
+    async Task Search()
+    {
+        await OnSearch.InvokeAsync(name);
+    }
+
+    async Task RealoadList()
+    {
+        name = string.Empty;
+        await OnReaload.InvokeAsync();
+    }
+}

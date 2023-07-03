@@ -1,0 +1,106 @@
+﻿@inherits Base
+@inject NavigationManager _navigation
+@inject ICompanyService _companyService
+@inject IClientService _clientService
+@inject IAuthenticationService authenticationService
+
+@if (loading)
+{
+    <Loading></Loading>
+    return;
+}
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="navbar navbar-expand bg-light align-items-end">
+        <div style="height: 100px; margin-right: 50px">
+            <img src="imagens/Captura de tela 2023-03-01 185850.png" style="height: 100px" alt="Logo">
+            <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="nav flex-column flex-sm-row">
+            <NavLink class="nav-link bb-nav" href="">
+                <span aria-hidden="true"></span> Inicio
+            </NavLink>
+        </div>
+        <div class="nav flex-column flex-sm-row">
+            <NavLink class="nav-link bb-nav" href="establishments" Match="NavLinkMatch.All">
+                <span aria-hidden="true"></span> Estabelecimentos
+            </NavLink>
+        </div>
+        <div class="nav flex-column flex-sm-row">
+            <NavLink class="nav-link bb-nav" href="foods">
+                <span aria-hidden="true"></span> Cardápio
+            </NavLink>
+        </div>
+        <AuthorizeView>
+            <Authorized>
+                @if (CurrentCompany != null)
+                {
+                    <div class="nav flex-column flex-sm-row px-4" style="position: relative; left: 43%; text-align: center;">
+                        <NavLink class="nav-link" href="companyprofile">
+                            <img src="@Methods.ConvertImgBytesToDisplay(CurrentCompany.Logo)" img-fluid width="70" style="border-radius: 50%">
+                            <div class="ml-3">
+                                <h5 class="name">
+                                    @CurrentCompany.Name
+                                </h5>
+                            </div>
+                        </NavLink>
+                    </div>
+                }
+                @if (CurrentClient != null)
+                {
+                    <div class="nav flex-column flex-sm-row px-4" id="bb-participate" style="background-color: red">
+                        <button class="btn" @onclick=@(() => Logout())>
+                            Sair
+                        </button>
+                    </div>
+                }
+            </Authorized>
+            <NotAuthorized>
+                <div class="nav flex-column flex-sm-row px-4" id="bb-participate">
+                    <NavLink class="nav-link bb-nav" href="login">
+                        <span aria-hidden="true"></span> Participar
+                    </NavLink>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    byte[]? image { get; set; }
+    bool loading { get; set; }
+
+    protected override async Task OnInitializedAsync() {
+        await OnInitializedBase();
+        loading = true;
+        StateHasChanged();
+        if (CurrentCompany != null)
+            CurrentCompany = await _companyService.Get(CurrentCompany.ID);
+        if (CurrentClient != null)
+            CurrentClient = await _clientService.Get(CurrentClient.ID);
+        loading = false;
+        StateHasChanged();
+    }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private void companyProfile()
+    {
+        _navigation.NavigateTo($"https://localhost:7254/companyprofile/{CurrentCompany.ID}");
+    }
+
+    async Task Logout() {
+        APIResult result = await authenticationService.Logout();
+        if (result.Result)
+            _navigation.NavigateTo("/", true);
+    }
+}

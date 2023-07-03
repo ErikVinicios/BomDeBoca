@@ -1,0 +1,12 @@
+﻿@if (Exibir)
+{
+    <div style="display: flex; justify-content: center; color: red;" role="alertdialog">
+        @ChildContent
+    </div>
+}
+@code {
+    [Parameter]
+    public bool Exibir { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

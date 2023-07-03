@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BomDeBoca.Client
+build_property.RootNamespace = BomDeBoca.Client
+build_property.ProjectDir = E:\BomDeBoca\BomDeBoca\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\BomDeBoca\BomDeBoca\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/BomDeBoca/BomDeBoca/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Pages/CompanyProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcGFueVByb2ZpbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Pages/Establishments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXN0YWJsaXNobWVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Pages/Foods.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Pages/Main.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/Aviso.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEF2aXNvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/CompanyProfileEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBhbnlQcm9maWxlRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/Layout/Base.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExheW91dFxCYXNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/Layout/Layout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExheW91dFxMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/Layout/OtherLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExheW91dFxPdGhlckxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/ListCompany.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExpc3RDb21wYW55LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/ListProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExpc3RQcm9kdWN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/Loading.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvYWRpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/NewProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5ld1Byb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/SearchBar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNlYXJjaEJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BomDeBoca/BomDeBoca/Client/Shared/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExheW91dFxOYXZNZW51LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-8m8deneaiq

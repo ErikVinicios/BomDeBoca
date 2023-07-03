@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BomDeBoca</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="BomDeBoca.Client.styles.css" rel="stylesheet" />
+    <link href="_content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="css/"></script>
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#phoneNumber").mask("(99) 99999-9999");
+        });
+
+        $(document).on('keydown', '[data-mask-for-cpf-cnpj]', function (e) {
+
+            var digit = e.key.replace(/\D/g, '');
+
+            var value = $(this).val().replace(/\D/g, '');
+
+            var size = value.concat(digit).length;
+
+            $(this).mask((size <= 11) ? '000.000.000-00' : '00.000.000/0000-00');
+        });
+
+        $(document).ready(function(){
+            $("#preco").mask("0.000.000,00", { reverse: true });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="app">
+        <Loading></Loading>
+    .</div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/BlazorInputFile/inputfile.js"></script>
+</body>
+
+</html>

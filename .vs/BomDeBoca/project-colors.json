@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3cb3cf56-fc50-4362-bf48-c471e332148f": {
+      "ProjectGuid": "3cb3cf56-fc50-4362-bf48-c471e332148f",
+      "DisplayName": "BomDeBoca.Client",
+      "ColorIndex": 0
+    },
+    "e0174c00-112a-4f87-96d6-b6cff3ed4f96": {
+      "ProjectGuid": "e0174c00-112a-4f87-96d6-b6cff3ed4f96",
+      "DisplayName": "BomDeBoca.Server",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,48 @@
+﻿@page "/establishments"
+@inherits Base
+@inject NavigationManager _navigation
+@inject ICompanyService _companyServices
+
+@if (loading)
+{
+    <Loading></Loading>
+    return;
+}
+else {
+    <SearchBar placeholder="Nome do Estabelecimento" OnSearch="search" OnReaload="loadList"></SearchBar>
+
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
+        <ListCompany @ref="listCompany" CompanyList="list" CurrentUser="currentUser" ShowButtomDetails="(CurrentClient != null)"></ListCompany>
+    </div>
+}
+
+@code {
+    List<Company> companyList;
+    List<Company> list;
+    Object currentUser;
+    CompanyProfile companyProfile;
+    ListCompany listCompany;
+    bool loading { get; set; }
+
+    protected override async Task OnInitializedAsync() {
+        await OnInitializedBase();
+        await loadList();
+        currentUser = CurrentClient != null ? CurrentClient : CurrentCompany;
+    }
+
+    async Task search(string name)
+    {
+        list = companyList.Where(c => c.Name.ToUpper().Contains(name.ToUpper())).ToList();
+        listCompany.Refresh();
+    }
+
+    async Task loadList()
+    {
+        loading = true;
+        StateHasChanged();
+        companyList = await _companyServices.GetAll();
+        list = companyList;
+        loading = false;
+        StateHasChanged();
+    }
+}

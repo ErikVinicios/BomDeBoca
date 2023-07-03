@@ -1,0 +1,55 @@
+﻿@inject ICompanyService _companyService
+@inject NavigationManager _navigation
+
+@if (CompanyList == null)
+{
+    <Loading></Loading>   
+    return;
+}
+
+@if (CompanyList.Count() == 0)
+{
+    <div class="mt-5">
+        <h3>Nenhuma empresa encontrada</h3>
+    </div>
+}
+else {
+    <div style="width: auto;">
+        @foreach (Company company in CompanyList)
+        {
+            <div class="col-sm-3 col-lg-3 col-md-3" style="text-align: center; width: 1000px; display: flex; justify-content: center;">
+                <div class="card" style="border: none; padding-top: 5%; display: block;">
+                    <img src="@Methods.ConvertImgBytesToDisplay(company.Logo)" class="img-rounded" alt="@company.Name" width="180" height="180" />
+                    <div class="card-body" style="padding-top: 4%;">
+                        <h4 class="card-title">@company.Name</h4>
+                        <p class="card-text">@company.Description</p>
+                        @if (ShowButtomDetails) {
+                            <button class="btn btn-warning" style="border-radius: 10px" @onclick=@(() => Show(company)) data-dismiss="modal">Detalhes</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Parameter]
+    public List<Company> CompanyList { get; set; }
+    [Parameter]
+    public Object CurrentUser { get; set; }
+    [Parameter]
+    public bool ShowButtomDetails { get; set; }
+
+    BomDeBoca.Client.Pages.CompanyProfile companyProfile;
+
+    private async Task Show(Company company)
+    {
+        _navigation.NavigateTo($"https://localhost:7254/companyprofile/{company.ID}/{((Client)CurrentUser).ID}");
+    }
+
+    public async Task Refresh()
+    {
+        StateHasChanged();
+    }
+}
